@@ -263,6 +263,7 @@ li.social {
 
  
 }
+/* contact */
 #about {
     padding-top: 50px;
     margin-top: -50px;
@@ -273,13 +274,16 @@ li.social {
     word-wrap: break-word;
     display: block;
     z-index: 100;
-    margin-top: 0px;}
+    margin-top: 0px;
+    text-align: center;
+}
 .contact-info{
     
     height: 100%;
     -ms-flex-line-pack: center;
         align-content: center;
-}
+        
+}       
 .contact-info p{
     color: white;
 }
