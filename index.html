@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web|Lora:700" rel="stylesheet">
+ <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://use.fontawesome.com/815c1e657e.js"></script>
+  <script src="script.js"></script>
+  </head>
+  <body>
+      <header id='home'>
+      <div class="homepage-hero-module">
+    <div class="video-container">
+     
+        <video autoplay loop class="fillWidth" poster="./media/Snapshots/Love-Coding.jpg">
+            <source src="./media/MP4/Love-Coding.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="./media/WEBM/Love-Coding.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+         <div class="video-annotation-layer">
+      <div class="video-annotation-1"><h1>Phillip Eade</h1><p> 
+          <h3> <br>Web Developer</h3></p></div>
+      <div class="down"><a href="#about"><i class="fa fa-arrow-circle-o-down shadow fa-5x" aria-hidden="true"></i></a></div>
+      </div>
+   <ul class="fa-ul">
+  <li><a href="http://twitter.com/EadePhill" class=""><i class="fa-3x fa fa-twitter "></i></a></li>
+  <li><a href="https://linkedin.com/in/phillip-eade-bbaa90100"><i class="fa-3x fa fa-linkedin"></i></a></li>
+  <li><a href="https://codepen.io/PhillFlippy/"><i class="fa-3x fa fa-codepen"></i></a></li>
+  <li><a href="https://github.com/PhillFlippy"><i class="fa-3x fa fa-github"></i></a></li>
+</ul>
+  
+      </div>
+      
+</div>
+
+<script>
+  //set up a cool looking shadow effect on my name.
+    const hero = document.querySelector('.video-annotation-1');
+    const text = hero.querySelector('h1');
+    const walk = 25;
+
+    function shadow(e){
+        const {offsetWidth: width, offsetHeight: height} = hero;
+        let {offsetX: x, offsetY: y} = e;
+        
+        if(this !== e.target){
+            x = x + e.target.offsetLeft;
+            y = y + e.target.offsetTop;
+         }
+         // How far shadow should go
+         const xWalk = Math.round(( x / width * walk) - (walk/2));
+          const yWalk = Math.round(( x / height * walk) - (walk/2));
+            text.style.textShadow = `  ${yWalk}px ${xWalk}px 0 rgba(0,0,0,0.3)`;
+           // text.style.transform  = 'rotate('+xWalk+'deg)'; 
+
+}
+    hero.addEventListener('mousemove', shadow);
+
+    </script>
+    </header>
+
+    <nav class="flex-nav">
+        <ul>
+            <li><a href="#home"> Home </a></li>
+            <li><a href="#about"> About </a></li>
+            <li><a href="#projects"> Projects </a></li>
+            <li><a href="#contact"> Contact </a></li>
+             <li class="social">
+          <a href="http://twitter.com/EadePhill"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li class="social">
+          <a href="https://linkedin.com/in/phillip-eade-bbaa90100"><i class="fa fa-linkedin-square"></i></a>
+        </li>
+        <li class="social">
+          <a href="https://github.com/PhillFlippy"><i class="fa fa-github"></i></a>
+        </li>
+        <li class="social">
+          <a href="https://codepen.io/PhillFlippy/"><i class="fa fa-codepen"></i></a>
+        </li>
+        <li class="social">
+          <a href="mailto:phillemail89@gmail.com"><i class="fa fa-envelope"></i></a>
+        </li>
+
+        </ul>
+        </nav>
+        <section id='about'>
+       <div class="about-container">   
+    <div class="about-wrap">
+    
+      
+         <h1>About Me</h3>
+          <p> Hi, I am Phillip.</p>
+      
+  
+          </div>
+           <div class="twitter"> <a class="twitter-timeline" data-width="300" data-height="500" data-theme="light" href="https://twitter.com/EadePhill">Tweets by EadePhill</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+       </div>
+       </div>
+        </section>
+        <section id='projects'>
+          <div class="project-container"> 
+            <div class=" project project1">
+              <h1>Giphy React</h1>        
+              <img class="align-self" src='http://res.cloudinary.com/phillip-eade/image/upload/v1495201518/screencapture-localhost-3000-1495201449535_pskamj.png' alt='Image of Giphy website'>      
+              <p><strong>About:</strong> Giphy is a gif repository website that hosts thousands of moving images on their website. For this project I connected to the Giphy API and allow users to search for an image using a keyword
+                of their choice or they can click on the trending tab and see all of the hottest gifs on the website.</p>
+                <p>Technology: This project was created using ReactJS as the framework. Bootstrap was used for the search bar and navigation bar and CSS flexbox was used to display the images. I used javascript promises to asynchonously get the JSON data from the Giphy API and than I used that data
+                  to show it on the website. 
+              </p>
+             <a href="https://giphyreact.herokuapp.com/"><p class="butt">Live Demo</p></a> 
+            </div>
+            <div class="project project2">
+              <h1>Twitch API</h1>
+              <img class="align-self" src='http://res.cloudinary.com/phillip-eade/image/upload/v1495198200/screencapture-codepen-io-PhillFlippy-full-VbBVMR-1495198099066_einixp.png' alt='picture of twitch api website'>  
+              <p>About: This project was a part of my submission for the FreeCodeCamp front-end certification. I was given a set of specifications and I had complete the website using my own coding and design abilities. 
+                The purpose of the website is to get the JSON file of a set of Twitch Streamers and show if they are online. I listed the streamers in a Bootstrap group list and colour coded them based on whether or not they are currentlty online
+                and I display what game they are streaming, all this information is provided by the Twitch API. </p>
+                <p>Technology: The JSON document was grabbed and processed by JQuery and I used HTML and Bootstrap to display the data to the user. Some JQuery animation was used to display the about section.</p>
+                <a href="https://codepen.io/PhillFlippy/full/VbBVMR/"><p class="butt">Live Demo</p></a>
+            </div>
+            <div class="project project3">
+                <h1>Javascript Calculator</h1>
+                <img class='align-self' src='http://res.cloudinary.com/phillip-eade/image/upload/v1495196528/340879.zNqzeM.47334b8b-3ea7-4f66-b422-17a548721642_rsrtxr.png' alt='Picture of a calculator' >
+              <p>About: This is a calculator that I designed and built. It is a simple calculator where the user can click the buttons and have their calcuations done.</p>
+                <p>Technology: Javascript for all of the calculations and handling the input. CSS to make the input fields look like a calculator.</p>
+               <a href="https://codepen.io/PhillFlippy/full/zNqzeM/"> <p class="butt">Live Demo</p></a>
+
+            </div>
+                 <div class="project project4">
+                <h1>React Timer</h1>
+                <img class='align-self' src='http://res.cloudinary.com/phillip-eade/image/upload/v1495197232/screencapture-floating-harbor-41041-herokuapp-1495197003133_aoa3fa.png' alt='Picture of a clock'>
+              <p>About: This project was a part of my submission for the FreeCodeCamp front-end certification. I was given a set of specifications and I had complete the website using my own coding and design abilities. 
+                The purpose of the website is to get the JSON file of a set of Twitch Streamers and show if they are online. I listed the streamers in a Bootstrap group list and colour coded them based on whether or not they are currentlty online
+                and I display what game they are streaming, all this information is provided by the Twitch API. </p>
+                <p>Technology: The JSON document was grabbed and processed by Javascript and I used HTML and Bootstrap to display the data to the user</p>
+              <a href='http://floating-harbor-41041.herokuapp.com/#/?_k=8h0xuk'><p class="butt">Live Demo</p></a>
+
+            </div>
+                  <div class="project project3">
+                <h1>Todo App</h1>
+                <img class='align-self' src='http://res.cloudinary.com/phillip-eade/image/upload/v1495199562/Goal_ziktop.png' alt='Photo of a Todo app' >
+              <p>About: This project was a part of my submission for the FreeCodeCamp front-end certification. I was given a set of specifications and I had complete the website using my own coding and design abilities. 
+                The purpose of the website is to get the JSON file of a set of Twitch Streamers and show if they are online. I listed the streamers in a Bootstrap group list and colour coded them based on whether or not they are currentlty online
+                and I display what game they are streaming, all this information is provided by the Twitch API. </p>
+                <p>Technology: The JSON document was grabbed and processed by Javascript and I used HTML and Bootstrap to display the data to the user</p>
+                <a href="https://goalkeeper89.herokuapp.com"><p class="butt">Live Demo</p></a>
+
+            </div>
+            
+          </div>
+          </section>
+ <script>
+    // Change the navigation bar when it gets to a certain point. 
+    const nav = document.querySelector('.flex-nav');
+    let topOfNav = nav.offsetTop; 
+    function fixNav() {
+      if(window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav'); //add a class to the navigation bar to make it fixed so it will stay with the user.
+      } else {
+        document.body.classList.remove('fixed-nav');
+        document.body.style.paddingTop = 0;
+      }
+  
+    }
+    window.addEventListener('scroll', fixNav);
+    
+  </script>
+        <section id='contact'>
+          <div class="contact-container">
+          <div class='contact-info'>
+            <p>Email: PhillEmail89@gmail.com</p>
+            <p>Twitter: @PhillFlippy</p>
+          </div></div>
+              </section>
+  
+  </body>
+</html>
