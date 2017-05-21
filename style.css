@@ -134,6 +134,9 @@ nav {
       -ms-flex: 3;
           flex: 3;
 }
+.project5{
+    margin: 10px;
+}
 
 }
 body.fixed-nav nav {
