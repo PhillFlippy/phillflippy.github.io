@@ -150,8 +150,6 @@ nav {
       
   }
   .project5{
-   min-width: 90%;
-   margin: 100px;
     -webkit-box-flex: 1;
   
         -ms-flex: 1 1 100%;
@@ -460,7 +458,7 @@ li.social {
   
     -webkit-box-flex: 0;
   
-        -ms-flex: 0 1 45%;
+        -ms-flex: 0 1 100%;
   
-            flex: 0 1 45%;
+            flex: 0 1 100%;
 }
