@@ -378,11 +378,11 @@ li.social {
      display: -ms-flexbox;
      display: flex;
    
-  -webkit-box-pack: justify;
+  -webkit-box-pack: center;
    
-      -ms-flex-pack: justify;
+      -ms-flex-pack: center;
    
-          justify-content: space-between;
+          justify-content: center;
 }
 .about-wrap {
   max-width: 70vw;
@@ -455,7 +455,7 @@ li.social {
           flex:1 1 50%;
 }
 .project5{
-  
+  margin: 0 auto;
     -webkit-box-flex: 0;
   
         -ms-flex: 0 1 100%;
