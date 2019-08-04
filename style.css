@@ -13,11 +13,21 @@ html {
 }
 body {
  font-family: 'Source Sans Pro', sans-serif;
- background-color: #DCD9D4; 
+ background-color: rgba(0,0,0,0.2); 
 
   font-weight: normal;
   margin: 0 auto;
  
+}
+h1{
+    text-align: center;
+}
+iframe{
+    width: 300px;
+    height: 400px;
+    padding: 0px;
+    border: none;
+    margin-right: 20px;
 }
 body h1{
    font-family: 'Cormorant', serif;
@@ -417,12 +427,13 @@ li.social {
   margin: 20px;
 }
 .project{
-  background:rgba(255,255,255,0.2);
+  background:white;
+  text-align: justify;
+  padding: 1em;
   -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
   margin:50px;
-  border-radius: 4px;
-  text-align: center;
+  border-radius: 10px;
  -webkit-box-align: start;
      -ms-flex-align: start;
          align-items: flex-start;
